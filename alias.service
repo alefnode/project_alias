@@ -5,7 +5,11 @@ Requires=network.target
 
 [Service]
 Type=idle
+<<<<<<< HEAD
 Environment="DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus" "XDG_SESSION_TYPE=tty" "XDG_SESSION_CLASS=user" "XDG_SESSION_ID=c1" "XDG_RUNTIME_DIR=/run/user/1000"
+=======
+Environment="XDG_RUNTIME_DIR=/run/user/1000"
+>>>>>>> master
 ExecStartPre=/usr/bin/python3 -u sleep.py
 ExecStart=/usr/bin/python3 -u app.py > /home/pi/sample.log 2>&1
 WorkingDirectory=/home/pi/project_alias
